@@ -1,0 +1,12 @@
+<!-- form_with部分 -->
+<%= form_with model:@book,  local: true do |book| %>
+  <p>Title: <%= @book.title %></p>
+
+  <p>Body: <%= @book.body %></p>
+<% end %>
+
+  <%= link_to 'Edit', "/books/#{@book.id}/edit", method: :get %>
+  <%= link_to 'Back', "/books", method: :get %>
+
+
+
